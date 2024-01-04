@@ -35,6 +35,9 @@ fi
 # Install fzf
 brew install fzf
 
+# Install colorls
+gem install colorls
+
 # Add symlinks
 unlink ~/.zshrc
 unlink ~/.p10k.zsh
