@@ -1,10 +1,12 @@
 #!/bin/bash
+
+# Set base path
+THIS_FILE=$(realpath ${BASH_SOURCE[0]})
+THIS_DIR="$(dirname -- ${THIS_FILE})"
+
 # Install required stuff
 brew install koekeishiya/formulae/skhd
 
-# Set base path
-BASE="dirname $(realpath $0)"
-
 # Set symlink
 unlink ~/.config/skhd
-ln -s ${BASE}/.config/skhd ~/.config/skhd
+ln -s ${THIS_DIR}/.config/skhd ~/.config/skhd
