@@ -36,7 +36,7 @@ fi
 brew install fzf
 
 # Install colorls
-gem install colorls
+sudo gem install colorls
 
 # Add symlinks
 unlink ~/.zshrc
