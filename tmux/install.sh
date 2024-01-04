@@ -9,7 +9,7 @@ brew install tmux
 
 # powerlevel10k
 PLUGIN_PATH="$HOME/.tmux/plugins/tpm"
-if [ ! -d "${plugin_path}" ]; then
+if [ ! -d "${PLUGIN_PATH}" ]; then
   echo "Installing tpm"
   git clone --depth=1 https://github.com/tmux-plugins/tpm ${PLUGIN_PATH} 
 fi

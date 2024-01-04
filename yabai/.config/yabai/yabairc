@@ -4,12 +4,12 @@ yabai -m config layout bsp
 # Add new window to second child
 yabai -m config window_placement second_child
 
-# Set all padding and gaps to 20pt (default: 0)
-yabai -m config top_padding    12
-yabai -m config bottom_padding 12
-yabai -m config left_padding   12
-yabai -m config right_padding  12
-yabai -m config window_gap  12
+# Set all padding and gaps 
+yabai -m config top_padding    8
+yabai -m config bottom_padding 8
+yabai -m config left_padding   8
+yabai -m config right_padding  8
+yabai -m config window_gap  8
 
 # mouse settings
 yabai -m config mouse_follows_focus on
