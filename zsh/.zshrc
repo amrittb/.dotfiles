@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias c="code"
-alias ls="colorls"
+alias ls="eza"
 alias t="tmux"
 alias k="kubectl"
 alias vi="nvim"

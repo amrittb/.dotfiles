@@ -32,11 +32,8 @@ if [ ! -d "${PLUGIN_PATH}" ]; then
   git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ${PLUGIN_PATH}
 fi
 
-# Install fzf
-brew install fzf
-
-# Install colorls
-sudo gem install colorls
+# Install fzf and eza
+brew install fzf eza
 
 # Add symlinks
 unlink ~/.zshrc
