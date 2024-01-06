@@ -32,12 +32,25 @@ if [ ! -d "${PLUGIN_PATH}" ]; then
   git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ${PLUGIN_PATH}
 fi
 
+
+brewIn() {
+  if brew ls --versions "$1"; then echo "$1 already installed."; else brew install "$1"; fi
+}
+
 # Install fzf and eza
-brew install fzf eza
+echo "Installing required tools"
+brewIn fzf
+brewIn eza
 
 # Add symlinks
-unlink ~/.zshrc
-unlink ~/.p10k.zsh
+echo "Cleaning symlinks"
+[ -f ~/.zshrc ] && unlink ~/.zshrc
+[ -f ~/.p10k.zsh ] && unlink ~/.p10k.zsh
+[ -f ~/.fzf.zsh ] && unlink ~/.fzf.zsh
+[ -f ~/.fzf.bash ] && unlink ~/.fzf.bash
 
-ln -s ${THIS_DIR}/.zshrc ~/.zshrc
-ln -s ${THIS_DIR}/.p10k.zsh ~/.p10k.zsh
+echo "Creating symlinks"
+[ ! -f ~/.zshrc ] && ln -s ${THIS_DIR}/.zshrc ~/.zshrc
+[ ! -f ~/.p10k.zsh ] && ln -s ${THIS_DIR}/.p10k.zsh ~/.p10k.zsh
+[ ! -f ~/.fzf.zsh ] && ln -s ${THIS_DIR}/.fzf.zsh ~/.fzf.zsh
+[ ! -f ~/.fzf.bash ] && ln -s ${THIS_DIR}/.fzf.bash ~/.fzf.bash
