@@ -4,9 +4,14 @@
 THIS_FILE=$(realpath ${BASH_SOURCE[0]})
 THIS_DIR="$(dirname -- ${THIS_FILE})"
 
+BIN_DIR="${THIS_DIR}/../bin"
+source "${BIN_DIR}/brew.sh"
+
 # Install required stuff
-brew install ripgrep
+echo "Installing required stuff"
+brewIn ripgrep
 
 # Set symlink
+echo "Recreating symlinks"
 unlink ~/.config/nvim
 ln -s ${THIS_DIR}/.config/nvim ~/.config/nvim

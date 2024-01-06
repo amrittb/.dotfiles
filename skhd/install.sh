@@ -4,9 +4,14 @@
 THIS_FILE=$(realpath ${BASH_SOURCE[0]})
 THIS_DIR="$(dirname -- ${THIS_FILE})"
 
+BIN_DIR="${THIS_DIR}/../bin"
+source "${BIN_DIR}/brew.sh"
+
 # Install required stuff
-brew install koekeishiya/formulae/skhd
+echo "Installing required stuff"
+brewIn koekeishiya/formulae/skhd
 
 # Set symlink
+echo "Recreating symlinks"
 unlink ~/.config/skhd
 ln -s ${THIS_DIR}/.config/skhd ~/.config/skhd
