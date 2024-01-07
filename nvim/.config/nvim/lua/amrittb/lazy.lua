@@ -38,9 +38,7 @@ lazy.opts = {}
 -- Actual setup for plugins
 lazy.setup({
   -- Themes
-  'navarasu/onedark.nvim',
-  'folke/tokyonight.nvim',
-  { "catppuccin/nvim", name = "catppuccin" },
+  { "eddyekofo94/gruvbox-flat.nvim" },
 
   -- UI: Status line
   'nvim-lualine/lualine.nvim',
