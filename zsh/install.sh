@@ -45,8 +45,6 @@ echo "Recreating symlinks"
 unlink ~/.zshrc
 unlink ~/.p10k.zsh
 unlink ~/.fzf.zsh
-unlink ~/.fzf.bash
 ln -s ${THIS_DIR}/.zshrc ~/.zshrc
 ln -s ${THIS_DIR}/.p10k.zsh ~/.p10k.zsh
 ln -s ${THIS_DIR}/.fzf.zsh ~/.fzf.zsh
-ln -s ${THIS_DIR}/.fzf.bash ~/.fzf.bash

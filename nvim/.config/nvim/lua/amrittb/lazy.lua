@@ -38,7 +38,7 @@ lazy.opts = {}
 -- Actual setup for plugins
 lazy.setup({
   -- Themes
-  { "eddyekofo94/gruvbox-flat.nvim" },
+  'sainnhe/gruvbox-material',
 
   -- UI: Status line
   'nvim-lualine/lualine.nvim',
