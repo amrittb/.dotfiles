@@ -9,6 +9,10 @@ vim.opt.number = true
 -- Enable relative line number
 vim.opt.relativenumber = true
 
+-- Split below & right
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- Enable mouse selection for all modes
 vim.opt.mouse = "a"
 
@@ -21,6 +25,7 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = false
 -- Incremental search
 vim.opt.incsearch = true
+vim.opt.inccommand = 'split'
 
 -- Word wrap
 vim.opt.wrap = true
