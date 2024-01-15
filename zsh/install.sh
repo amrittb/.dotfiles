@@ -40,6 +40,20 @@ echo "Installing required stuff"
 brewIn fzf
 brewIn eza
 
+# Install sdkman
+if [ ! -d "$HOME/.sdkman" ]; then
+  echo "Installing sdkman"
+  curl -s "https://get.sdkman.io" | bash
+fi
+
+source $HOME/.sdkman/bin/sdkman-init.sh
+
+# Installing Java
+echo "Installing SDKs"
+sdk install java 8.0.392-amzn
+sdk install java 11.0.21-amzn
+sdk install java 17.0.9-amzn
+
 # Add symlinks
 echo "Recreating symlinks"
 unlink ~/.zshrc

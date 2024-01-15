@@ -17,7 +17,7 @@ shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # Modify window size
 # Toggle zoom
-shift + alt - m : yabai -m window --toggle zoom-fullscreen
+shift + alt - z : yabai -m window --toggle zoom-fullscreen
 
 # Balance after manual resize
 shift + alt - e : yabai -m space --balance
