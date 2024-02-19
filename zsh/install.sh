@@ -58,7 +58,9 @@ sdk install java 17.0.9-amzn
 echo "Recreating symlinks"
 unlink ~/.zshrc
 unlink ~/.p10k.zsh
+unlink ~/fzf
 unlink ~/.fzf.zsh
 ln -s ${THIS_DIR}/.zshrc ~/.zshrc
 ln -s ${THIS_DIR}/.p10k.zsh ~/.p10k.zsh
+ln -s ${THIS_DIR}/fzf ~/fzf
 ln -s ${THIS_DIR}/.fzf.zsh ~/.fzf.zsh
