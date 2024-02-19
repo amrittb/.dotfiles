@@ -4,6 +4,8 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     selected=$(find ~/Projects -mindepth 1 -maxdepth 2 -type d | fzf)
+    selected+=("~/.dotfiles")
+    selected+=("~/Obsidian/rakuten-vault")
 fi
 
 if [[ -z $selected ]]; then
