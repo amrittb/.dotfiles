@@ -3,9 +3,29 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Projects -mindepth 1 -maxdepth 2 -type d | fzf)
-    selected+=("~/.dotfiles")
-    selected+=("~/Obsidian/rakuten-vault")
+    directories=""
+
+    if [ -d "${HOME}/Projects" ]; then
+        directories=$(printf "${directories}\n$(find ~/Projects -mindepth 1 -maxdepth 2 -type d)")
+    fi
+
+    if [ -d "${HOME}/.dotfiles" ]; then
+        directories=$(printf "${directories}\n${HOME}/.dotfiles")
+    fi
+
+    if [ -d "${HOME}/Obsidian/rakuten-vault" ]; then
+        directories=$(printf "${directories}\n${HOME}/Obsidian/rakuten-vault")
+    fi
+
+    if [ -d "${HOME}/Private/Growth/Professional/Projects" ]; then
+        directories=$(printf "${directories}\n$(find ${HOME}/Private/Growth/Professional/Projects -mindepth 1 -maxdepth 1 -type d)")
+    fi
+
+    if [ -d "${HOME}/Private/Growth/Personal/personal-vault" ]; then
+        directories=$(printf "${directories}\n${HOME}/Private/Growth/Personal/personal-vault")
+    fi
+
+    selected=$(echo "${directories}" | fzf)
 fi
 
 if [[ -z $selected ]]; then
