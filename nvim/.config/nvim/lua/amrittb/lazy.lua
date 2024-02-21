@@ -162,6 +162,9 @@ lazy.setup({
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
-  }
+  },
+
+  -- Java
+  { 'mfussenegger/nvim-jdtls' }
 })
 
