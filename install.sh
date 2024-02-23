@@ -8,3 +8,4 @@ echo "Installing everything"
 /bin/bash nvim/install.sh
 /bin/bash yabai/install.sh
 /bin/bash skhd/install.sh
+/bin/bash scripts/install.sh

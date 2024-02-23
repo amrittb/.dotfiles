@@ -9,6 +9,8 @@ source "${BIN_DIR}/brew.sh"
 
 # Install required stuff
 echo "Installing alacritty"
+brew tap homebrew/cask-fonts
+brewInCask font-fira-code-nerd-font
 brewInCask alacritty
 
 # Set symlink
