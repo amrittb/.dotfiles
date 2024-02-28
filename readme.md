@@ -31,6 +31,22 @@ cd ~/.dotfiles
 ./install.sh
 ```
 
+## Post Setup
+
+```sh
+# Enable Accessibility settings
+yabai --start-service
+skhd --start-service
+
+# Install neovim plugins
+neovim
+
+# Install tmux plugins
+tmux
+
+# Run install command <Leader> + I
+```
+
 ## Recommended Settings
 - Mac
   - Turn on hidding for dock
@@ -39,3 +55,4 @@ cd ~/.dotfiles
   - Add 9 desktops & enable keyboard shortcut to allow switching to next desktop using `Control + <num>`
   - Disable command to switch input using `Control + Space`
   - Increase the "Key repeat rate" and decrease the "Delay until repeat"
+
