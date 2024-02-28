@@ -1,23 +1,41 @@
 # Dotfiles
 
 Configurations for:
-1. [zsh](https://ohmyz.sh/)
-2. [tmux](https://github.com/tmux/tmux/wiki)
-3. [yabai](https://github.com/koekeishiya/yabai/wiki)
-4. [skhd](https://github.com/koekeishiya/skhd/wiki)
-5. [neovim](https://neovim.io/)
+- [Homebrew](https://brew.sh/)
+- [Alacritty](https://alacritty.org/)
+- [zsh](https://ohmyz.sh/)
+- [tmux](https://github.com/tmux/tmux/wiki)
+- [yabai](https://github.com/koekeishiya/yabai/wiki)
+- [skhd](https://github.com/koekeishiya/skhd/wiki)
+- [neovim](https://neovim.io/)
 
 
-To do:
-- Add Homebrew Installation
-- Add step to create `XDG_CONFIG` directory
-
-Prerequisites:
+## Prerequisites
 - Git should be installed.
 
-Recommended Settings:
+Run the following to install XCode Developer tools in Macos.
+
+```sh
+git
+```
+
+## Setup
+
+```sh
+cd ~/
+
+git clone https://github.com/amrittb/.dotfiles.git
+
+cd ~/.dotfiles
+
+./install.sh
+```
+
+## Recommended Settings
 - Mac
   - Turn on hidding for dock
   - Change Appearance to Dark mode
   - Turn on "Reduce motion" in "Accessibility > Display" settings
+  - Add 9 desktops & enable keyboard shortcut to allow switching to next desktop using `Control + <num>`
   - Disable command to switch input using `Control + Space`
+  - Increase the "Key repeat rate" and decrease the "Delay until repeat"
