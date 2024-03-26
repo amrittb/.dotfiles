@@ -11,10 +11,22 @@ source "${BIN_DIR}/brew.sh"
 echo "Installing alacritty"
 brew tap homebrew/cask-fonts
 brewInCask font-fira-code-nerd-font
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi
+
 brewInCask alacritty
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi
 
 # Set symlink
 echo "Recreating symlinks"
 unlink ~/.config/alacritty
 ln -s ${THIS_DIR}/.config/alacritty ~/.config/alacritty
-
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi

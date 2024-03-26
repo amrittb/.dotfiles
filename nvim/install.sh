@@ -10,9 +10,23 @@ source "${BIN_DIR}/brew.sh"
 # Install required stuff
 echo "Installing required stuff"
 brewIn neovim
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi
+
 brewIn ripgrep
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi
 
 # Set symlink
 echo "Recreating symlinks"
 unlink ~/.config/nvim
 ln -s ${THIS_DIR}/.config/nvim ~/.config/nvim
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi
+

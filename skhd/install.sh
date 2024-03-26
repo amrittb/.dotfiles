@@ -10,8 +10,17 @@ source "${BIN_DIR}/brew.sh"
 # Install required stuff
 echo "Installing required stuff"
 brewIn koekeishiya/formulae/skhd
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi
 
 # Set symlink
 echo "Recreating symlinks"
 unlink ~/.config/skhd
 ln -s ${THIS_DIR}/.config/skhd ~/.config/skhd
+ret=$?
+if [ $ret != 0 ]; then
+  exit $ret
+fi
+
